@@ -1,7 +1,9 @@
 import sys
 from robust_division_calculator import safe_divide
+from library_management import Book, Library
 
 def main():
+    # Demonstrate robust division functionality
     if len(sys.argv) != 3:
         print("Usage: python main.py <numerator> <denominator>")
         sys.exit(1)
@@ -12,13 +14,8 @@ def main():
     result = safe_divide(numerator, denominator)
     print(result)
 
-if __name__ == "__main__":
-    main()
 
-
-from library_management import Book, Library
-
-def main():
+    # Demonstrate library management functionality
     # Setup a small library
     library = Library()
     library.add_book(Book("Brave New World", "Aldous Huxley"))
